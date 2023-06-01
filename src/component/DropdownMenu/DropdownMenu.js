@@ -21,12 +21,12 @@ const DropdowMenu = ({ options, onSelect }) => {
       style={{
         width: "292px",
         height: "81px",
-        paddingleft: "24px",
-        fontfamily: "Inter",
-        fontstyle: "normal",
-        fontweight: "400",
-        fontsize: "40px",
-        lineheight: "48px",
+        paddingLeft: "24px",
+        fontFamily: "Inter",
+        fontStyle: "normal",
+        fontWeight: "400",
+        fontSize: "40px",
+        lineHeight: "48px",
         color: "#000000",
       }}
     >

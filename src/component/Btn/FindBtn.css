@@ -1,4 +1,24 @@
 .FindBtnWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FindBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 532px;
+  height: 100px;
+
+  background: #fd3a69;
+  border-radius: 20px;
+
+  margin-bottom: 2vmax;
+}
+
+.FindBtn > span {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -6,4 +26,29 @@
   line-height: 48px;
 
   color: #ffffff;
+}
+
+.Guidebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 522px;
+  height: 60vmax;
+  border: 3px solid #ed174f;
+}
+
+.GuideText {
+  width: 428px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 70px;
+  /* or 175% */
+
+  text-align: center;
+
+  color: #000000;
 }

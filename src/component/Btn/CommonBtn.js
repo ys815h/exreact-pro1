@@ -2,11 +2,7 @@ import "./CommonBtn.css";
 import FindBtn from "./FindBtn";
 
 const CommonBtn = () => {
-  return (
-    <div className="CommonBtnWrapper">
-      <FindBtn />
-    </div>
-  );
+  return <button className="CommonBtnWrapper"></button>;
 };
 
 export default CommonBtn;
