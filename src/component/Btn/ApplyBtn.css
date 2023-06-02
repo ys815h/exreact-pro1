@@ -1,0 +1,25 @@
+.ApplyWrapper {
+  display: flex;
+  justify-content: center;
+  margin: -24px 0 30px 0;
+}
+
+.ApplyBtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 219px;
+  height: 70px;
+  background: #fecd1a;
+  border-radius: 20px;
+}
+
+.ApplyBtn > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #000000;
+}

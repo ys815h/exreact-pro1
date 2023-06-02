@@ -1,10 +1,12 @@
 // import Domain from "./pages/Domain/Domain";
 import FindHelper from "./pages/FindHelper/FindHelper";
+import HelperProfile from "./pages/HelperProfile/HelperProfile";
 
 function App() {
   return (
     // <Domain></Domain>
-    <FindHelper></FindHelper>
+    // <FindHelper></FindHelper>
+    <HelperProfile></HelperProfile>
   );
 }
 

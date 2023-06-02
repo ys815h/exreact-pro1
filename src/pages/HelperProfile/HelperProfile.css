@@ -1,0 +1,12 @@
+.hpfWrapper {
+  width: 100vmin;
+  height: 100vmax;
+}
+
+.helperPfWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 174vmax; */
+  justify-content: space-evenly;
+}

@@ -2,7 +2,7 @@ svg {
   margin: 1% 1% 1% 0;
 }
 
-span {
+.iconWrapper > span {
   font-family: "Inter";
   font-style: italic;
   font-weight: 800;

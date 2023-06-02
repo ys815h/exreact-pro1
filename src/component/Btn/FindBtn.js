@@ -1,8 +1,9 @@
 import "./FindBtn.css";
 import React, { useState } from "react";
+
 import kms from "../../images/MSKim.png";
-import kyl from "../../images/MSKim.png";
-import ide from "../../images/MSKim.png";
+import kyl from "../../images/YLKim.png";
+import ide from "../../images/DELee.png";
 
 const FindBtn = () => {
   const [showDiv, setShowDiv] = useState(true);
@@ -64,26 +65,37 @@ const FindBtn = () => {
         ) : (
           <div>
             {arrays.map((array, arrayIndex) => (
-              <div key={arrayIndex} className="HelperPof">
-                <div>
-                  <span>
-                    {" "}
-                    {arrayIndex} 번째 배열의 새로운 div {array[0]}
-                  </span>
+              <button key={arrayIndex} className="HelperProfWrapper">
+                <div className="HelperProfGrid1">
+                  <div>
+                    <div className="HelperProfName">
+                      <span>{array[0]}</span>
+                    </div>
+                    <div className="HelperProfCon">
+                      <span>성별 : {array[4]}</span>
+                      <span>근무요일 : {array[6]}</span>
+                      <span>연령 : {array[7]}</span>
+                      <span>근무시간 : {array[5]}</span>
+                    </div>
+                  </div>
+
+                  <div className="HelperProfImg">
+                    <img src={array[8]} />
+                  </div>
                 </div>
-                <div>
-                  <span>
-                    {" "}
-                    {arrayIndex} 번째 배열의 새로운 div {array[1]}
-                  </span>
+
+                <div className="HelperTagWrapper">
+                  <div className="HelperTag">
+                    <span>#{array[1]}</span>
+                  </div>
+                  <div className="HelperTag">
+                    <span>#{array[2]}</span>
+                  </div>
+                  <div className="HelperTag">
+                    <span>#{array[3]}</span>
+                  </div>
                 </div>
-                <div>
-                  <span>
-                    {" "}
-                    {arrayIndex} 번째 배열의 새로운 div {array[2]}
-                  </span>
-                </div>
-              </div>
+              </button>
             ))}
           </div>
         )}
