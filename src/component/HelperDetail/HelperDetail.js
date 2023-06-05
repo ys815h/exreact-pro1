@@ -1,8 +1,7 @@
 import "./HelperDetail.css";
 import ide from "../../images/DELee.png";
+import ApplyModalBtn from "../Btn/ApplyModalBtn";
 import DetailBtn from "../Btn/DetailBtn";
-import ApplyBtn from "../Btn/ApplyBtn";
-// import "../Btn/DetailBtn.css";
 
 const HelperDetail = () => {
   const arrays = [
@@ -18,9 +17,7 @@ const HelperDetail = () => {
       ide,
     ],
   ];
-
   const queno = [1, 2, 3, 4, 5, 6];
-
   return (
     <div className="HelperDetailWrapper">
       {arrays.map((array, arrayIndex) => (
@@ -39,7 +36,7 @@ const HelperDetail = () => {
             </div>
 
             <div className="HelperProfImg">
-              <img src={array[8]} />
+              <img src={array[8]} alt="" />
             </div>
           </div>
 
@@ -57,50 +54,51 @@ const HelperDetail = () => {
         </div>
       ))}
       {/* <div className="DetailWrapper"> */}
-      {arrays.map((array, arrayIndex) => (
-        <div key={arrayIndex} className="DetailWrapper">
-          <span>기본사항</span>
-          <div className="DetailBtnWrapper">
-            <button key={queno} className="DetailBtn">
+      {/* {arrays.map((array, arrayIndex) => ( */}
+      {/* <div key={arrayIndex} className="DetailWrapper">
+          <span>기본사항</span> */}
+      {/* <div className="DetailBtnWrapper"> */}
+      {/* <DetailBtn></DetailBtn> */}
+      {/* <button key={queno[0]} className="DetailBtn">
               <span>{array[0]} 님의 자기소개</span>
             </button>
-            <button key={queno} className="DetailBtn">
+            <button key={queno[1]} className="DetailBtn">
               <span>{array[0]} 님의 근무내용</span>
-            </button>
-          </div>
+            </button> */}
+      {/* </div> */}
 
-          <span>경력</span>
+      {/* <span>경력</span>
           <div className="DetailBtnWrapper">
-            <button key={queno} className="DetailBtn">
+            <button key={queno[2]} className="DetailBtn">
               <span>{array[0]} 님의 경험</span>
             </button>
-            <button key={queno} className="DetailBtn">
+            <button key={queno[3]} className="DetailBtn">
               <span>{array[0]} 님의 자격증</span>
             </button>
           </div>
 
           <span>인성</span>
           <div className="DetailBtnWrapper">
-            <button key={queno} className="DetailBtn">
+            <button key={queno[4]} className="DetailBtn">
               <span>{array[0]} 님의 장점</span>
             </button>
-            <button key={queno} className="DetailBtn">
+            <button key={queno[5]} className="DetailBtn">
               <span>{array[0]} 님의 포부</span>
             </button>
-          </div>
+          </div> */}
 
-          <ApplyBtn></ApplyBtn>
-          {/* 컴포넌트안에 텍스트가 안들어감 해결방법?
+      {/* 버튼을 눌렀을 때 효과 바뀌게 */}
+
+      {/* <ApplyModalBtn></ApplyModalBtn> */}
+      {/* 컴포넌트안에 텍스트가 안들어감 해결방법?
           <DetailBtn>
             <div>
               <span>{array[0]} 님의 장점</span>
             </div>
           </DetailBtn>
           <DetailBtn>{array[0]} 님의 포부</DetailBtn> */}
-        </div>
-      ))}
+      {/* </div> */}
     </div>
-    // </div>
   );
 };
 export default HelperDetail;

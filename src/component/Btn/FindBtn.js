@@ -4,12 +4,15 @@ import React, { useState } from "react";
 import kms from "../../images/MSKim.png";
 import kyl from "../../images/YLKim.png";
 import ide from "../../images/DELee.png";
+import { useNavigate } from "react-router-dom";
 
 const FindBtn = () => {
   const [showDiv, setShowDiv] = useState(true);
   const handleClick = () => {
     setShowDiv(false);
   };
+
+  const navigate = useNavigate();
 
   const arrays = [
     [
@@ -65,7 +68,11 @@ const FindBtn = () => {
         ) : (
           <div>
             {arrays.map((array, arrayIndex) => (
-              <button key={arrayIndex} className="HelperProfWrapper">
+              <button
+                key={arrayIndex}
+                className="HelperProfWrapper"
+                onClick={() => navigate("/helperProfilePage")}
+              >
                 <div className="HelperProfGrid1">
                   <div>
                     <div className="HelperProfName">

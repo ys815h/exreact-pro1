@@ -1,19 +1,22 @@
 // import DetailBtn from "../../component/Btn/DetailBtn";
+import ApplyModalBtn from "../../component/Btn/ApplyModalBtn";
+import DetailBtn from "../../component/Btn/DetailBtn";
 import Header from "../../component/Header/Header";
 import HelperDetail from "../../component/HelperDetail/HelperDetail";
-import "./HelperProfile.css";
+import "./HelperProfilePage.css";
 
-const HelperProfile = () => {
+const HelperProfilePage = () => {
   return (
     <div className="hpfWrapper">
       <Header></Header>
 
       <div className="helperPfWrapper">
         <HelperDetail></HelperDetail>
-        <div></div>
+        <DetailBtn></DetailBtn>
+        <ApplyModalBtn></ApplyModalBtn>
       </div>
     </div>
   );
 };
 
-export default HelperProfile;
+export default HelperProfilePage;

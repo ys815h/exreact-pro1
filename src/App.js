@@ -1,12 +1,20 @@
-// import Domain from "./pages/Domain/Domain";
-import FindHelper from "./pages/FindHelper/FindHelper";
-import HelperProfile from "./pages/HelperProfile/HelperProfile";
-
+import Domain from "./pages/Domain/Domain";
+import FindHelperPage from "./pages/FindHelper/FindHelperPage";
+import HelperDetailProfile from "./pages/HelperDetailProfile/HelperDetailProfile";
+import HelperProfilePage from "./pages/HelperProfile/HelperProfilePage";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    // <Domain></Domain>
-    // <FindHelper></FindHelper>
-    <HelperProfile></HelperProfile>
+    <Routes>
+      <Route path="/" element={<Domain />} />
+      <Route path="/findHelper" element={<FindHelperPage />} />
+      <Route path="/helperProfilePage" element={<HelperProfilePage />} />
+      <Route
+        path="/helperDetailProfile"
+        // path="/helperDetailProfile/:id"
+        element={<HelperDetailProfile />}
+      />
+    </Routes>
   );
 }
 

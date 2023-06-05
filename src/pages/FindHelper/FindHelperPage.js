@@ -3,9 +3,9 @@ import DropdownMenuData from "../../component/DropdownMenu/DropdownMenuData";
 import FhIcon from "../../component/FHIcon/FhIcon";
 import Header from "../../component/Header/Header";
 import UserGPS from "../../component/UserGPS/UserGPS";
-import "./FindHelper.css";
+import "./FindHelperPage.css";
 
-const FindHelper = () => {
+const FindHelperPage = () => {
   return (
     <div className="fhWrapper">
       <Header></Header>
@@ -29,4 +29,4 @@ const FindHelper = () => {
   );
 };
 
-export default FindHelper;
+export default FindHelperPage;
