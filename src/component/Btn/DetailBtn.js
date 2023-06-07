@@ -1,15 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import "./DetailBtn.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const DetailBtn = (props) => {
   const navigate = useNavigate();
   const handleBtnClick = () => {
-    navigate("/helperDetailProfile");
+    // navigate("/helperDetailProfile?careno=${}");
+    navigate("/helperDetailProfile?careno=${}");
   };
 
-  const careno = { id: 3, value: "이다은" };
-  const queno = [
+  let careno = { id: 3, value: "이다은" };
+
+  let queno = [
     { id: 1 },
     { id: 2 },
     { id: 3 },

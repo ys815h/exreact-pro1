@@ -1,103 +1,73 @@
 import "./HelperDetail.css";
 import ide from "../../images/DELee.png";
-import ApplyModalBtn from "../Btn/ApplyModalBtn";
-import DetailBtn from "../Btn/DetailBtn";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const HelperDetail = () => {
-  const arrays = [
-    [
-      "이다은",
-      "사려깊은",
-      "약속중시",
-      "꼼꼼한",
-      "여성",
-      "12:00~17:00",
-      5,
-      29,
-      ide,
-    ],
-  ];
-  const queno = [1, 2, 3, 4, 5, 6];
+  const [caregiverinfo, setCaregiverinfo] = useState([]);
+
+  const tes = () => {
+    axios
+      .get("/api/v1/caregiver/1", {
+        withCredentials: true,
+      })
+      .then((response) => {
+        console.log(response);
+        if (response.data) {
+          console.log("dddddss" + response.data.result);
+          console.log(typeof response.data.result);
+          const result = Object.values(response.data.result);
+
+          console.log("rst dsfdasd " + typeof response.data.result);
+          console.log("rst dsfdasd " + typeof result);
+          setCaregiverinfo([...result, result.length + 1]);
+          console.log("asdfasd" + caregiverinfo[0]);
+        }
+      })
+      .catch((error) => {
+        // 오류가 발생했을 때의 처리
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    tes();
+    console.log("Test" + caregiverinfo);
+  }, []);
+
   return (
     <div className="HelperDetailWrapper">
-      {arrays.map((array, arrayIndex) => (
-        <div key={arrayIndex} className="HelperProfileWrapper">
-          <div className="HelperProfGrid1">
-            <div>
-              <div className="HelperProfName">
-                <span>{array[0]}</span>
-              </div>
-              <div className="HelperProfCon">
-                <span>성별 : {array[4]}</span>
-                <span>근무요일 : {array[6]}</span>
-                <span>연령 : {array[7]}</span>
-                <span>근무시간 : {array[5]}</span>
-              </div>
+      <div className="HelperProfileWrapper">
+        <div className="HelperProfGrid1">
+          <div>
+            <div className="HelperProfName">
+              <span>{caregiverinfo[1]}</span>
             </div>
-
-            <div className="HelperProfImg">
-              <img src={array[8]} alt="" />
+            <div className="HelperProfCon">
+              <span>성별 : {caregiverinfo[5]}</span>
+              <span>근무요일 : {caregiverinfo[7]}</span>
+              <span>연령 : {caregiverinfo[8]}</span>
+              <span>근무시간 : {caregiverinfo[6]}</span>
             </div>
           </div>
 
-          <div className="HelperTagWrapper">
-            <div className="HelperTag">
-              <span>#{array[1]}</span>
-            </div>
-            <div className="HelperTag">
-              <span>#{array[2]}</span>
-            </div>
-            <div className="HelperTag">
-              <span>#{array[3]}</span>
-            </div>
+          <div className="HelperProfImg">
+            <img src={caregiverinfo[9]} alt="" />
           </div>
         </div>
-      ))}
-      {/* <div className="DetailWrapper"> */}
-      {/* {arrays.map((array, arrayIndex) => ( */}
-      {/* <div key={arrayIndex} className="DetailWrapper">
-          <span>기본사항</span> */}
-      {/* <div className="DetailBtnWrapper"> */}
-      {/* <DetailBtn></DetailBtn> */}
-      {/* <button key={queno[0]} className="DetailBtn">
-              <span>{array[0]} 님의 자기소개</span>
-            </button>
-            <button key={queno[1]} className="DetailBtn">
-              <span>{array[0]} 님의 근무내용</span>
-            </button> */}
-      {/* </div> */}
 
-      {/* <span>경력</span>
-          <div className="DetailBtnWrapper">
-            <button key={queno[2]} className="DetailBtn">
-              <span>{array[0]} 님의 경험</span>
-            </button>
-            <button key={queno[3]} className="DetailBtn">
-              <span>{array[0]} 님의 자격증</span>
-            </button>
+        <div className="HelperTagWrapper">
+          <div className="HelperTag">
+            <span>#{caregiverinfo[2]}</span>
           </div>
-
-          <span>인성</span>
-          <div className="DetailBtnWrapper">
-            <button key={queno[4]} className="DetailBtn">
-              <span>{array[0]} 님의 장점</span>
-            </button>
-            <button key={queno[5]} className="DetailBtn">
-              <span>{array[0]} 님의 포부</span>
-            </button>
-          </div> */}
-
-      {/* 버튼을 눌렀을 때 효과 바뀌게 */}
-
-      {/* <ApplyModalBtn></ApplyModalBtn> */}
-      {/* 컴포넌트안에 텍스트가 안들어감 해결방법?
-          <DetailBtn>
-            <div>
-              <span>{array[0]} 님의 장점</span>
-            </div>
-          </DetailBtn>
-          <DetailBtn>{array[0]} 님의 포부</DetailBtn> */}
-      {/* </div> */}
+          <div className="HelperTag">
+            <span>#{caregiverinfo[3]}</span>
+          </div>
+          <div className="HelperTag">
+            <span>#{caregiverinfo[4]}</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

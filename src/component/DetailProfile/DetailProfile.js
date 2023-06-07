@@ -3,7 +3,7 @@ import "./DetailProfile.css";
 import React, { useState } from "react";
 
 const DetailProfile = (props) => {
-  const careno = { id: 3, value: "이다은" };
+  const careno = { id: 1, value: "이다은" };
   const queno = [
     {
       id: 1,

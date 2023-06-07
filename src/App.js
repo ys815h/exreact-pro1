@@ -8,7 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Domain />} />
       <Route path="/findHelper" element={<FindHelperPage />} />
-      <Route path="/helperProfilePage" element={<HelperProfilePage />} />
+      <Route path="/helperProfilePage/1" element={<HelperProfilePage />} />
       <Route
         path="/helperDetailProfile"
         // path="/helperDetailProfile/:id"
