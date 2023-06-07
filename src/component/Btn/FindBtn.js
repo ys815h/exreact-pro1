@@ -1,7 +1,9 @@
 import "./FindBtn.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "react-router-dom";
 
-import kms from "../../images/MSKim.png";
+// import kms1 from "../../../public/images/MSKim.png";
+import kms2 from "../../images/MSKim.png";
 import kyl from "../../images/YLKim.png";
 import ide from "../../images/DELee.png";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +16,15 @@ const FindBtn = () => {
 
   const navigate = useNavigate();
 
+  const [list, setList] = useState([]);
+
+  // useEffect(() => {
+  //   axios.get("/api/v1/caregiver/{year}/{month}/{lon}/{lat}").then((res) => {
+  //     setList(res.data);
+  //     console.log(list);
+  //   });
+  // }, []);
+
   const arrays = [
     [
       "김민수",
@@ -24,7 +35,9 @@ const FindBtn = () => {
       "12:00~17:00",
       5,
       31,
-      kms,
+      kms2,
+      // <img src="/images/MSKimg.png" alt="" />,
+      // "/images/MSKimg.png",
     ],
     [
       "김유리",
@@ -57,7 +70,6 @@ const FindBtn = () => {
           <span>찾아보기</span>
         </button>
       </div>
-      {/* 붉은 박스 */}
       <div>
         {showDiv ? (
           <div className="Guidebox">
@@ -87,7 +99,8 @@ const FindBtn = () => {
                   </div>
 
                   <div className="HelperProfImg">
-                    <img src={array[8]} />
+                    <img src={array[8]} alt="" />
+                    {/* {array[8]} */}
                   </div>
                 </div>
 

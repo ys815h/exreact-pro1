@@ -1,6 +1,21 @@
 import "./UserGPS.css";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const UserGPS = () => {
+  const [seniorloc, setSeniorloc] = useState({});
+  useEffect(() => {
+    axios
+      .get("http://localhost:7070/api/v1/senior/1", { withCredentials: true })
+      .then((response) => {
+        if (response.data) {
+          console.log(response.data);
+          setSeniorloc(response.data.result);
+          console.log(seniorloc.lati);
+          console.log(seniorloc.lon);
+        }
+      });
+  });
   return (
     <div className="UserGPSWrapper">
       <svg
