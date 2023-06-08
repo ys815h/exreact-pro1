@@ -5,6 +5,7 @@ import FhIcon from "../../component/FHIcon/FhIcon";
 import UserGPS from "../../component/UserGPS/UserGPS";
 import "./FindHelperPage.css";
 
+// 유저 받아오는
 var user = {
   seniorno: "1",
   name: "전다연",

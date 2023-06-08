@@ -43,7 +43,12 @@ const HelperDetail = (props) => {
           </div>
 
           <div className="HelperProfImg">
-            <img src={caregiverinfo[9]} alt="" />
+            <img
+              src={
+                "https://seoro-bucket.s3.ap-northeast-2.amazonaws.com/profile/16862208368547114849428640171943.jpg2023-06-0819%3A40%3A5026.821336958361908"
+              }
+              alt=""
+            />
           </div>
         </div>
 

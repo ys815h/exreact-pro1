@@ -18,14 +18,15 @@ const DropdowMenu = ({ options, onSelect }) => {
       value={isOpen}
       onChange={ddmChange}
       style={{
-        width: "292px",
-        height: "81px",
-        paddingLeft: "24px",
+        width: "150px",
+        height: "50px",
+        paddingLeft: "15px",
         fontFamily: "Inter",
         fontStyle: "normal",
         fontWeight: "400",
-        fontSize: "40px",
-        lineHeight: "48px",
+        fontSize: "24px",
+        lineHeight: "38px",
+        textAlign: "center",
         color: "#000000",
       }}
     >

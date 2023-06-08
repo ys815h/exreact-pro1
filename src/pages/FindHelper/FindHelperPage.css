@@ -1,13 +1,12 @@
 .fhWrapper {
-  width: 100vmin;
-  height: 100vmax;
-  /* display: flex; */
+  width: 100vw;
+  height: 100vh;
 }
 
 .GuideWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 25vmax;
+  height: 25vh;
   justify-content: space-evenly;
 }

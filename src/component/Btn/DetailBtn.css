@@ -1,7 +1,7 @@
 .DetailWrapper1 {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 95vw;
   height: 1400px;
   justify-content: space-evenly;
   margin-left: 10px;
@@ -24,7 +24,7 @@
   justify-content: space-around;
   align-items: center;
 
-  width: 597px;
+  width: 90vw;
   height: 304px;
   margin-bottom: 30px;
 
@@ -32,7 +32,7 @@
 }
 
 .DetailBtn1 {
-  width: 532px;
+  width: 85vw;
   height: 100px;
   background: #fd3a69;
   border-radius: 20px;
