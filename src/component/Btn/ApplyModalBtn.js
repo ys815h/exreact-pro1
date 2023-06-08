@@ -1,12 +1,32 @@
+import axios from "axios";
 import "./ApplyModalBtn.css";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
-const ApplyModalBtn = () => {
+const ApplyModalBtn = (props) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef();
+  const seniorno = 1;
+  const [dataform, setDataform] = useState({
+    careno: props.careno,
+    seniorno: seniorno,
+    // seniorno: localStorage.getItem("user").name,
+    year: props.year,
+    month: props.month,
+  });
 
   const openModal = () => {
-    setModalOpen(true);
+    axios
+      .post("api/v1/connect", dataform, {
+        headers: { "Content-Type": `multipart/form-data` },
+      })
+      .then((response) => {
+        setModalOpen(true);
+      })
+      .catch((error) => {
+        // 오류가 발생했을 때의 처리
+        console.log(error);
+        alert("오류");
+      });
   };
 
   const closeModal = () => {
@@ -19,17 +39,10 @@ const ApplyModalBtn = () => {
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("click", handleOutsideClick);
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
-
   return (
     <div className="ApplyWrapper">
       <button className="ApplyBtn" onClick={openModal}>
-        <img src="images/check-mark2.png" />
+        <img src="images/check-mark2.png" alt="" />
         <span>신청하기</span>
       </button>
 
@@ -39,11 +52,11 @@ const ApplyModalBtn = () => {
             <div className="close">
               <span onClick={closeModal}>&times;</span>
             </div>
-            {/* <div className="modalImg"> */}
             <img src="images/ApplySuccess.png" alt="" />
-            {/* </div> */}
             <div className="md-content">
-              <span>모달 내용</span>
+              <span>[{props.careName}] 요양사님을 신청하였습니다.</span>
+              <span>추후 결과를 문자로 전달해 드리겠습니다.</span>
+              <span> 신청일 기준 1~2일 소요 될 수 있습니다.</span>
             </div>
           </div>
         </div>

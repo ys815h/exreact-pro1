@@ -28,11 +28,9 @@ const DropdownMenuData = (props) => {
 
   const handleSelectYear = (Year) => {
     props.changeYear(Year);
-    console.log("선택된 값:", Year);
   };
   const handleSelectMonth = (Month) => {
     props.changeMonth(Month);
-    console.log("선택된 값:", Month);
   };
 
   return (
