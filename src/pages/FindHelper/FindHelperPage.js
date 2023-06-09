@@ -5,7 +5,7 @@ import FhIcon from "../../component/FHIcon/FhIcon";
 import UserGPS from "../../component/UserGPS/UserGPS";
 import "./FindHelperPage.css";
 
-// 유저 받아오는
+// 유저 정보 받아오기
 var user = {
   seniorno: "1",
   name: "전다연",
@@ -14,6 +14,7 @@ var user = {
   lon: "142",
   lati: "44",
 };
+// JSON.parse(localStorage.getItem('user')).numberPk = {}
 
 const FindHelperPage = () => {
   const [year, setYear] = useState("");

@@ -43,7 +43,7 @@ const HelperDetail = (props) => {
           </div>
 
           <div className="HelperProfImg">
-            <img src={caregiverinfo[9]} alt="" />
+            <img src={caregiverinfo[10]} alt="" />
           </div>
         </div>
 
