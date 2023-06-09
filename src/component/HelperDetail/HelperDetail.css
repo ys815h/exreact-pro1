@@ -1,126 +1,18 @@
+.HelperDetailWrapper {
+  display: flex;
+  width: 100vw;
+}
 .HelperProfileWrapper {
   display: flex;
-  width: 90vw;
+  width: 100vw;
   height: 410px;
   border-bottom: 3px solid #808080;
   background-color: #fff;
   flex-direction: column;
   justify-content: space-evenly;
-  /* align-items: center; */
+  margin-left: 1%;
 }
 
-/* 
-.HelperProfName {
-  display: flex;
-  justify-content: center;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-
-  width: 20px;
-  height: 20px;
-  border-bottom: 4px solid #fecd1a;
+.HelperProfileWrapper > .HelperProfGrid1 > div > .HelperProfCon {
+  margin-left: 10%;
 }
-
-.HelperProfCon {
-  display: grid;
-  grid-template-columns: 127px 267px;
-  grid-gap: 1rem;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 60px;
-  color: #000000;
-  width: 400px;
-  height: 200px;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.HelperProfGrid1 {
-  display: grid;
-  align-items: center;
-  grid-gap: 2rem;
-  grid-template-columns: 400px 180px;
-  margin-top: 3vmax;
-}
-
-.HelperProfImg > img {
-  width: 170px;
-  height: 200px;
-}
-
-.HelperTagWrapper {
-  display: flex;
-  justify-content: space-around;
-  width: 620px;
-  height: 60px;
-}
-.HelperTag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 55px;
-  background: #223047;
-  border-radius: 30px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 60px;
-  color: #fecd1a;
-} */
-
-/* .DetailWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 1400px;
-  justify-content: space-evenly;
-  margin-left: 10px;
-}
-
-.DetailWrapper > span {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-
-  color: #000000;
-  margin-left: 14 px;
-}
-
-.DetailBtnWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 597px;
-  height: 304px;
-  margin-bottom: 30px;
-
-  background: #f5f5f5;
-}
-
-.DetailBtn {
-  width: 532px;
-  height: 100px;
-  background: #fd3a69;
-  border-radius: 20px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
-
-  color: #ffffff;
-} */

@@ -1,22 +1,11 @@
-/* Group 9323 */
-
-/* .detailProfileWrapper {
-position: absolute;
-width: 588px;
-height: 752px;
-left: 54px;
-top: 582px;
-} */
-
-/* Rectangle 49 */
 .detailProfileWrapper {
   box-sizing: border-box;
 
-  height: 700.17px;
-  width: 588px;
+  height: 90vmin;
+  width: 90vw;
 
   background: #ffffff;
-  border: 7px solid #fd3a69;
+  border: 5px solid #fd3a69;
   border-radius: 30px;
   margin: 5%;
   display: flex;
@@ -31,15 +20,17 @@ top: 582px;
   justify-content: space-between;
 }
 .detailTag {
-  width: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
   height: 49px;
   background: #ffd745;
   border-radius: 50px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  text-align: center;
+  font-size: 24px;
 
   color: #000000;
 }
@@ -50,7 +41,7 @@ top: 582px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 44px;
   /* identical to box height */
 
@@ -63,11 +54,12 @@ top: 582px;
 }
 
 .detailContent > span {
-  width: 500px;
+  width: 90vw;
+  height: 30vmin;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 70px;
 
   color: #000000;
@@ -79,52 +71,16 @@ top: 582px;
 }
 
 .ttsBtn {
-  width: 219px;
-  height: 59px;
+  width: 40vw;
+  height: 10vmin;
   background: #ed174f;
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 39px;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-
-/* Polygon 5 */
-/* .Polygon {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 53.47px;
-  height: 76.52px;
-  left: 529.36px;
-  top: 582px;
-
-  background: #ffffff;
-  border: 7px solid #fd3a69;
-  transform: matrix(0.95, 0.3, -0.38, 0.92, 0, 0);
-} */
-
-/* Polygon 6 */
-
-/* position: absolute;
-width: 53.65px;
-height: 53.88px;
-left: 514.8px;
-top: 608.32px;
-
-background: #FFFFFF;
-transform: matrix(0.98, 0.21, -0.27, 0.96, 0, 0); */
-
-/* Rectangle 50 */
-
-/* position: absolute;
-width: 52px;
-height: 28.99px;
-left: 525px;
-top: 639.98px;
-
-background: #FFFFFF; */

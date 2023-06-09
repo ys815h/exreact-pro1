@@ -54,9 +54,14 @@ const ApplyModalBtn = (props) => {
             </div>
             <img src="images/ApplySuccess.png" alt="" />
             <div className="md-content">
-              <span>[{props.careName}] 요양사님을 신청하였습니다.</span>
-              <span>추후 결과를 문자로 전달해 드리겠습니다.</span>
-              <span> 신청일 기준 1~2일 소요 될 수 있습니다.</span>
+              <p>[ {props.careName} ] 요양사님을</p>
+              <p>신청하였습니다.</p>
+              <p>추후 결과를 문자로 </p>
+              <p>전달해 드리겠습니다. </p>
+              <p>
+                신청일 기준 <span>1~2</span>일
+              </p>
+              <p>소요 될 수 있습니다. </p>
             </div>
           </div>
         </div>

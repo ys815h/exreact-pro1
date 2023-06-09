@@ -16,7 +16,7 @@ const HelperDetailProfilePage = () => {
 
   return (
     <div className="hpfWrapper">
-      <div className="helperPfWrapper">
+      <div className="helperDPfWrapper">
         <HelperDetail careno={careno}></HelperDetail>
         <DetailProfile
           careno={careno}

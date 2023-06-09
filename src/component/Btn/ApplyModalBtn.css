@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 219px;
+  width: 50vw;
   height: 70px;
   background: #fecd1a;
   border-radius: 20px;
@@ -34,11 +34,11 @@
 
 .ApplyWrapper > .modal > .modal-content {
   width: 75vw;
-  height: 58vh;
+  height: 65vh;
   display: flex;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 47.5%;
   transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 20px;
@@ -51,8 +51,10 @@
 }
 
 .ApplyWrapper > .modal > .modal-content > img {
-  width: 230px;
-  height: 71px;
+  width: 150px;
+  height: 50px;
+  margin-top: -5%;
+  margin-bottom: 5%;
 }
 
 .ApplyWrapper > .modal > .modal-content > .md-content {
@@ -61,22 +63,40 @@
   height: 40vh;
   border: 4px solid #fd3a69;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+  padding: 5% 0 5% 0;
 }
-.md-content > span {
+.md-content > p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 100px;
-  margin: 1%;
+  line-height: 1px;
+  margin: 5%;
+  padding-left: 5%;
 }
+.md-content > p > span {
+  font-size: 30px;
+  color: #fd3a69;
+}
+
+.md-content > p:last-child {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.md-content > p:nth-child(5) {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .close {
   display: flex;
   flex-direction: row-reverse;
-  font-size: 100px;
+  font-size: 80px;
   margin-left: 62vw;
-  margin-top: -5vh;
+  margin-top: -7vh;
   margin-bottom: -7vh;
   cursor: pointer;
 }
